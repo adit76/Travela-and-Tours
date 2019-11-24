@@ -1,0 +1,419 @@
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Nunito', sans-serif;
+		}
+
+		.container .video{
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.container .video video{
+			width: 100%;
+			background-position: center center;
+		}
+
+		.container .navigation .nav-left img{
+			width: 100px;
+			height: 100px;
+		}
+
+		.container .overlay{
+			background: rgba(10,10,10, 0.3);
+			z-index: 1;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.container .navigation{
+			color: white;
+			width: 95%;
+			position: absolute;
+			z-index: 999;
+		}
+
+		.container .navigation .nav-left{
+			float: left;
+		}
+		.container .navigation .nav-right{
+			float: right;
+			padding: 20px;
+		}
+
+		.container .navigation .nav-right ul{
+			list-style: none;
+			display: flex;
+		}
+
+		.container .navigation .nav-right ul li{
+			padding: 10px 20px;
+			border-bottom: 2px solid transparent;
+			transition: 0.3s ease;
+			cursor: pointer;
+			font-size: 15px;
+			text-shadow: 5px 5px 5px black;
+		}
+
+		.container .navigation .nav-right ul li a{
+			text-decoration: none;
+			color: white;
+		}
+
+		.container .navigation .nav-right ul li:hover{
+			border-bottom: 2px solid white;
+		}
+
+
+		.container .booking{
+			position: absolute;
+			z-index: 999;
+			top: 40%;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			color: white;
+			text-align: center;
+		}
+
+		.booking h5{
+			letter-spacing: 1px;
+		}
+
+		.container .booking .form{
+			padding: 10px;
+			background: rgba(10,10,10, 0.4);
+			width: 80%;
+			margin: 10px auto;
+		}
+
+
+		.container .booking .form  input{
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin: 10px;
+		}
+
+		.container .booking .form button{
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			background: #FF4A52;
+			outline: none;
+			transition: 0.2s ease;
+		}
+
+		.container .booking .form button:hover{
+			background: #1ec6b6;
+		}
+
+		.section1{
+			margin: 100px 50px;
+			text-align: center;
+		}
+
+		.section1 h5{
+			color: #AAAEB3;
+			padding: 10px;
+		}
+
+		.section1 .destinations{
+			margin: 20px 0;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.section1 .destinations .destination-inner{
+			cursor: pointer;
+			transition: 0.3s ease;
+		}
+
+		.section1 .destinations .destination-inner img{
+			width: 300px;
+			height: 280px;
+			position: relative;
+			border-radius: 5px;
+		}
+
+		.section1 .destinations .destination-inner:hover{
+			transform: translateY(-10px);
+		}
+
+		.section1 .destinations .destination-inner h2{
+			color: white;
+			position: absolute;
+			text-align: center;
+			z-index: 999;
+			margin-top: 230px;
+			margin-left: 20px;
+		}
+
+		.section2{
+			margin: 100px 50px;
+			text-align: center;
+		}
+
+		.section2 h5{
+			color: #AAAEB3;
+			padding: 10px;
+		}
+
+		.section2 p{
+			font-size: 14px;
+		}
+
+		.section2 .value{
+			display: flex;
+			justify-content: space-around;
+			padding: 20px 0;
+		}
+
+		.section2 .value .value-inner{
+			width: 400px;
+			border: 1px solid #AAAEB3;
+			border-radius: 5px;
+			transition: 0.3s ease;
+			cursor: pointer;
+		}
+
+		.section2 .value .value-inner:hover{
+			transform: translateY(-10px);
+			box-shadow: 5px 5px 10px  black;
+		}
+
+		.section2 .value .value-inner:hover h4{
+			transform: scale(1.1);
+		}
+
+		.section2 .value .value-inner img{
+			width: 100%;
+			height: 300px;
+		}
+
+		.section2 .value .value-inner h4{
+			color: white;
+			position: absolute;
+			padding: 5px;
+			background: #FF4A52;
+			margin-top: 230px;
+			transition: 0.5s ease;
+			z-index: 999;
+		}
+
+		.value .value-inner .bott{
+			margin: 20px 0;
+		}
+
+		.value .value-inner .bott .rating{
+			float: left;
+			padding: 10px;
+		}
+
+		.value .value-inner .bott .rating i{
+			color: black;
+			font-size: 12px;
+		}
+
+		.value .value-inner .bott .rating .fas{
+			color: #1ec6b6;
+		}
+
+		.value .value-inner .bott .time{
+			float: right;
+			padding: 10px;
+		}
+
+		.value .value-inner .bott .time i{
+			font-size: 12px;
+		}
+
+		.value .value-inner .bott .time p{
+			font-size: 12px;
+		}	
+
+		.section3{
+			text-align: center;
+			padding: 50px;
+		}	
+
+		.section3 h5{
+			color: #AAAEB3;
+			padding: 10px;
+		}
+
+		.section3 .why{
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.section3 .why .why-inner{
+			width: 30%;
+			box-shadow: 1px 1px 4px;
+			padding: 10px;
+			}
+
+
+
+		.section3 .why .why-inner img{
+			padding: 10px 0;
+			width: 200px;
+			height: 200px;
+		}
+
+		.section3 .why .why-inner h3{
+			padding: 10px;
+		}
+
+		.section4{
+			background: url("travel.jpg");
+			width: 100%;
+			height: 70%;
+			background-attachment: fixed;
+			background-size: cover;
+			
+		}
+
+		.section4 span p{
+			text-align: center;
+			color: white;
+			font-family: 'Pacifico', cursive;
+			letter-spacing: 1px;
+			padding-top: 300px;
+		}
+
+		footer{
+			background: black;
+			color: white;
+			padding: 30px 50px;
+			overflow: auto;
+		}
+
+		.footer{
+			
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.footer .awards{
+			width: 30%;
+			text-align: justify;
+		}
+
+		.footer .awards h3{
+			padding: 20px 0;
+		}
+
+		.footer .awards .award-img img{
+			width: 120px;
+			height: 120px;
+			margin: 20px;
+		}
+
+		.footer .contact{
+			width: 30%;
+			text-align: justify;
+		}
+
+		.footer .contact h3{
+			padding: 20px 0;
+		}
+
+		.footer .contact span{
+			display: flex;
+			padding: 5px 0;
+		}
+
+		.footer .contact span i{
+			font-size: 22px;
+			padding-right: 10px;
+		}
+
+		.footer .contact .social{
+			display: flex;
+			padding: 30px;
+		}
+
+		.footer .contact .social i{
+			padding: 0 20px;
+			font-size: 25px;
+		}
+
+		.footer .recent{
+			width: 30%;
+		}
+
+		.footer .recent h3{
+			padding: 20px 0;
+		}
+
+		.footer .recent-inner img{
+			width: 115px;
+			height: 115px;
+			cursor: pointer;
+		}
+
+		footer hr{
+			display: block;
+		    height: 1px;
+		    border: 0;
+		    border-top: 1px solid #dfdfdf;
+		    margin: 1em 0;
+		    padding: 0;
+		}
+
+		footer .copyright{
+			float: left;
+		}
+
+		footer .copyright p{
+			font-size: 12px;
+			font-family: sans-serif;
+			padding: 10px 30px;
+		}
+
+		footer .fot-nav{
+			float: right;
+		}
+
+		footer .fot-nav ul{
+			display: flex;
+			list-style: none;
+			padding: 10px 30px; 
+		}
+
+		footer .fot-nav ul li{
+			font-family: sans-serif;
+			font-size: 14px;
+			padding: 0 20px;
+			cursor: pointer;
+		}
+
+
+
+
+						/*BOOKING*/
+
+
+		.container .booking{
+			background: url(booking-back);
+			width: 100%;
+			height: 100%;
+			background-size: 100%;
+		}
+
+
+
+
+		/*FUCKED UP SHIT*/
+
+		#ui-datepicker-div{
+			position: absolute;
+			z-index: -99;
+			top: 0;
+		}
+
+
+

@@ -1,0 +1,824 @@
+<html>
+	<head>
+		<title>Destination</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nunito|Text+Me+One" rel="stylesheet">
+
+		<style>
+			*{
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+			
+			}
+
+		.container .navigation{
+			color: white;
+			width: 95%;
+			position: absolute;
+			z-index: 999;
+		}
+
+		.container .navigation .nav-left{
+			float: left;
+
+		}
+
+		.container .navigation .nav-left img{
+			width: 100px;
+			height: 100px;
+		}
+
+		.container .navigation .nav-right{
+			float: right;
+			padding: 20px;
+		}
+
+		.container .navigation .nav-right ul{
+			list-style: none;
+			display: flex;
+		}
+
+		.container .navigation .nav-right ul li{
+			padding: 10px 20px;
+			border-bottom: 2px solid transparent;
+			transition: 0.3s ease;
+			cursor: pointer;
+			font-size: 15px;
+			text-shadow: 5px 5px 5px black;
+		}
+
+		.container .navigation .nav-right ul li a{
+			text-decoration: none;
+			color: white;
+		}
+
+		.container .navigation .nav-right ul li:hover{
+			border-bottom: 2px solid white;
+		}
+
+		footer{
+			background: black;
+			color: white;
+			padding: 30px 50px;
+			overflow: auto;
+		}
+
+		.footer{
+			
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.footer .awards{
+			width: 30%;
+			text-align: justify;
+		}
+
+		.footer .awards h3{
+			padding: 20px 0;
+		}
+
+		.footer .awards .award-img img{
+			width: 120px;
+			height: 120px;
+			margin: 20px;
+		}
+
+		.footer .contact{
+			width: 30%;
+			text-align: justify;
+		}
+
+		.footer .contact h3{
+			padding: 20px 0;
+		}
+
+		.footer .contact span{
+			display: flex;
+			padding: 5px 0;
+		}
+
+		.footer .contact span i{
+			font-size: 22px;
+			padding-right: 10px;
+		}
+
+		.footer .contact .social{
+			display: flex;
+			padding: 30px;
+		}
+
+		.footer .contact .social i{
+			padding: 0 20px;
+			font-size: 25px;
+		}
+
+		.footer .recent{
+			width: 30%;
+		}
+
+		.footer .recent h3{
+			padding: 20px 0;
+		}
+
+		.footer .recent-inner img{
+			width: 115px;
+			height: 115px;
+			cursor: pointer;
+		}
+
+		footer hr{
+			display: block;
+		    height: 1px;
+		    border: 0;
+		    border-top: 1px solid #dfdfdf;
+		    margin: 1em 0;
+		    padding: 0;
+		}
+
+		footer .copyright{
+			float: left;
+		}
+
+		footer .copyright p{
+			font-size: 12px;
+			font-family: sans-serif;
+			padding: 10px 30px;
+		}
+
+		footer .fot-nav{
+			float: right;
+		}
+
+		footer .fot-nav ul{
+			display: flex;
+			list-style: none;
+			padding: 10px 30px; 
+		}
+
+		footer .fot-nav ul li{
+			font-family: sans-serif;
+			font-size: 14px;
+			padding: 0 20px;
+			cursor: pointer;
+		}
+
+		.back-img img{
+			width: 100%;
+			height: 100%;
+		}
+
+		.back-img .text{
+			color: white;
+			position: absolute;
+			width: 100%;
+		}
+
+		.back-img .text h1{
+			text-align: center;
+			margin-top: -130px;
+			right: 20px;
+			text-shadow: 5px 5px 5px black;
+		}
+
+		.container .book{
+			width: 40%;
+		    background: rgba(10,10,10,0.4);
+		    margin: 20px auto;
+		    display: flex;
+		    justify-content: space-around;
+		    transition: 0.2s ease;
+		    box-shadow: 5px 5px 5px black;
+		    position: absolute;
+		    z-index: 999;
+		    color: white;
+		    top: 70%;
+		    left: 20px;
+		}
+
+		.container .book .booknow button{
+			padding: 10px;
+			margin-top: 50%;
+			border: none;
+			background: #FF4A52;
+			color: white;
+			font-weight: bold;
+			border-radius: 5px;
+			transition: 0.3s ease;
+			cursor: pointer;
+
+		}
+
+		.container .book .booknow button:hover{
+			background: #1ec6b6;
+		}
+
+		.container .book .details ul li{
+			padding: 10px;
+			list-style: none;
+		}
+
+		
+
+		
+
+		 .overview{
+			display: flex;
+			justify-content: space-around;
+			margin: 50px 0;
+			padding: 50px;
+		}
+
+		 .overview .overview-text {
+			width: 700px;
+		}
+
+		 .overview .overview-image img{
+			width: 500px;
+			height: 300px;
+		}
+
+		main{
+			display: flex;
+			padding: 50px;
+			justify-content: space-around;
+		}
+
+		main .container-fluid{
+			width: 68%;
+			font-family: 'Roboto Mono', monospace;
+			
+		}
+
+		main .add_section{
+			width: 28%;
+			border: 1px solid #dfdfdf;
+			height: 450px;
+		}
+
+		main .container-fluid .breadcrumbs ul{
+			list-style: none;
+			display: flex;
+		}
+
+		main .container-fluid .breadcrumbs ul li{
+			font-family: sans-serif;
+			padding: 5px 10px;
+			font-weight: bold;
+			font-size: 18px;
+			border: 1px solid #E5E5E5;
+			border-bottom: none;
+			background: black;
+			color: white;
+			margin-right: 10px;
+			transition: 0.3s ease;
+			cursor: pointer;
+		}
+
+		main .container-fluid .breadcrumbs ul li:hover{
+			background: black;
+			color: white;
+		}
+
+		main .container-fluid .details-inner{
+			
+			padding: 10px;
+		}
+
+		main .container-fluid .details-inner p{
+			font-family: 'Roboto Mono', monospace;
+		}
+
+		main .container-fluid .details-inner h3{
+			margin-top: 20px;
+		}
+
+		main .container-fluid .details-inner ul li{
+			margin: 20px;
+		}
+
+		main .add_section{
+			padding: 10px;
+		}
+
+		main .add_section .add{
+			padding: 20px 0;
+		}
+
+		main .add_section .add .main{
+			display: flex;
+		}
+
+		main .add_section .add .main .add_img img{
+			width: 100px; 
+			height: 100px; 
+			border-radius: 50%;
+		}
+
+		main .add_section .add .main .add_details{
+			padding: 20px;
+		}
+
+		main .add_section .add .main .add_details p{
+			padding: 10px 0; 
+			font-size: 14px; 
+			color: #848484;
+		}		
+
+		#details.active, #itenary.active, #review.active{
+			color: black;
+			background: #dfdfdf;
+			user-select: none;
+		}
+
+		.section2{
+			margin: 100px 50px;
+			text-align: center;
+		}
+
+		.section2 h5{
+			color: #AAAEB3;
+			padding: 10px;
+		}
+
+		.section2 p{
+			font-size: 14px;
+		}
+
+		.section2 .value{
+			display: flex;
+			justify-content: space-around;
+			padding: 20px 0;
+		}
+
+		.section2 .value .value-inner{
+			width: 400px;
+			border: 1px solid #AAAEB3;
+			border-radius: 5px;
+			transition: 0.3s ease;
+			cursor: pointer;
+		}
+
+		.section2 .value .value-inner:hover{
+			transform: translateY(-10px);
+			box-shadow: 5px 5px 10px  black;
+		}
+
+		.section2 .value .value-inner:hover h4{
+			transform: scale(1.1);
+		}
+
+		.section2 .value .value-inner img{
+			width: 100%;
+			height: 300px;
+		}
+
+		.section2 .value .value-inner h4{
+			color: white;
+			position: absolute;
+			padding: 5px;
+			background: #FF4A52;
+			margin-top: 230px;
+			transition: 0.5s ease;
+			z-index: 999;
+		}
+
+		.value .value-inner .bott{
+			margin: 20px 0;
+		}
+
+		.value .value-inner .bott .rating{
+			float: left;
+			padding: 10px;
+		}
+
+		.value .value-inner .bott .rating i{
+			color: black;
+			font-size: 12px;
+		}
+
+		.value .value-inner .bott .rating .fas{
+			color: #1ec6b6;
+		}
+
+		.value .value-inner .bott .time{
+			float: right;
+			padding: 10px;
+		}
+
+		.value .value-inner .bott .time i{
+			font-size: 12px;
+		}
+
+		.value .value-inner .bott .time p{
+			font-size: 12px;
+		}	
+
+		.section3{
+			text-align: center;
+			padding: 50px;
+		}	
+		</style>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="overlay">
+
+			</div>
+
+			<div class="navigation">
+				<div class="nav-left">
+					<img src="logo.png">
+				</div>
+				<div class="nav-right">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="tours.html">TOURS</a></li>
+						<li>BOOKING</li>
+						<li><a href="destinations.html">DESTINATIONS</a></li>
+						<li>ABOUT US</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="back-img">
+				<img src="mustang.jpg">
+				<div class="text">
+					<h1>Mustang</h1>
+				</div>
+			</div>	
+
+			<div class="book">
+				<div class="details">
+					<ul>
+						<li><i class="fas fa-clock"></i> <span>Duration: 8 Nights / 9 Days</span></li>
+						<li><i class="fas fa-location-arrow"></i> <span>Location: Kathmandu - Mustang - Kathmandu</span></li>
+						<li><i class="fas fa-tags"></i> <span style="color: #1EC6B6; font-weight: bold;">Price: RS 20,000</span></li>	
+					</ul>
+				</div>
+				<div class="booknow">
+					<a href="booking.html"><button>Book Now</button></a>
+				</div>
+			</div>		
+		</div>
+
+		
+			<div class="overview">	
+
+
+				<div class="overview-text">
+					<h1 style="text-align: center; padding-bottom: 25px;">Overview</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+				</div>
+					
+				<div class="overview-image">
+					<img src="mustang2.jpg">
+				</div>
+			</div>
+
+			<main>
+				<div class="container-fluid">
+					<div class="breadcrumbs">
+						<ul>
+							<li id="details" onclick="showDetails()" class="active">Details</li>
+							<li id="itenary" onclick="showItenary()">Iternary</li>
+							<li id="review" onclick="showReview()">Review</li>
+						</ul>
+					</div>
+
+					<div class="details-inner" id="details1" style="display: block; opacity: 1; background: #dfdfdf; color: black; transition: 0.3s ease; ">
+						<p style="line-height: 20px; font-size: 18px; font-family: 'Text Me One', sans-serif;">Nepal, especially Kathmandu valley has lot to offer in terms of its culture, nature and the people living over here. This Kathmandu tour 2 nights and 3 days package has been designed to quench the thirst of tourists who are keen to have a glimpse of what Kathmandu has to offer. On the first day of arrival after rest you will be accompanied by our specialist guides to the temple of Pashupatinath and Boudhanath, both are UNESCO World heritage sites and holy places for pilgrims of Hinduism and Buddhism respectively. The second day program starts after breakfast and leads to two heritage sites Bhaktapur Durbar Square and Patan Durbar Square. The program can be customized as per your interest but this could be the ideal introduction of Kathmandu for a short trip. This can be operated as a Budget tour in Nepal or as a Luxury tour with deluxe hotel.
+						</p>
+
+						<h3 style="border-bottom: 2px solid black; border-radius: 5px; width: max-content; padding: 5px; font-family: 'Text Me One', sans-serif;">Tour Highlights</h3>
+						<ul style="font-family: 'Text Me One', sans-serif;">
+								<li>Trip duration - 2 nights/3 days</li>
+								<li>Tour code - Short Kathmandu tour</li>
+								<li>Places to see - Pashupatinath Temple, Boudhanath Stupa, Patan Durbar Square, Old Town, Bhaktapur Durbar square.</li>
+								<li>Minimum number of people- 1 and above.</li>
+								<li>Tour category- Budget/Standard and Deluxe.</li>
+						</ul>
+					</div>
+
+					<div class="details-inner" id="itenary1" onclick="showItenary()" style="display: none; opacity: 0; background: #dfdfdf; color: black; font-family: sans-serif; transition: 0.3s ease;">
+						<h3 style="border-bottom: 2px solid black; border-radius: 5px; width: max-content; padding: 5px;">Comfortable packages by private jeep</h3>
+						<ul style="font-size: 15px; font-family: 'Text Me One', sans-serif;">
+								<li>DAY 01: JEEP DRIVE FROM KATHMANDU - BENI - TATOPANI (2600M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 02: JEEP DRIVES TATOPANI TO KAGBENI 2900M. OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 03: JEEP DRIVES TO MUKTINATH TEMPLE 3,800M AND DRIVE BACK TO KAGBENI FOR OVERNIGHT AT TEA HOUSE.</li>
+								<li>DAY 03: JEEP DRIVES KAGBENI TO GHAMI (3510M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 04: JEEP DRIVES GHAMI TO LO MANTHANG (3840M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 05: EXPLORE LO MANTHANG (3840M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 06: DRIVE BACK TO CHHUKSANG (2980M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 07: DRIVE BACK TO KALOPANI (2530M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 08: DRIVE BACK TO POKHARA (840M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+								<li>DAY 09: FLY OR DRIVE BACK TO KATHMANDU (1340M). OVERNIGHT AT LOCAL TEA HOUSE</li>
+						</ul>
+					</div>
+					<div class="review-inner" id="review1" style="display: none; opacity: 0; background: #dfdfdf; color: black; font-family: sans-serif; transition: 0.3s ease; padding: 10px;">
+						<h3 style="border-bottom: 2px solid black; border-radius: 5px; width: max-content; padding: 5px; ">Comments</h3>
+						<div class="user" style="display: flex; padding: 20px;">
+							<div class="user-img">
+								<img src="user1.jpg" style="width: 100px; height: 100px; border-radius: 50%;">
+							</div>
+							<div class="user-details" style="width: 100%;">
+								<div class="top" style="display: flex; justify-content: space-between;">
+									<div class="user-text" style="display: inline-block; padding: 0 20px;">
+										<h4>Ramesh Pandey</h4>
+										<p style="font-size: 12px; color: #848484">about 12 hours ago</p>
+									</div>
+									<div class="rating" style="display: flex; color: #1ec6b6; font-size: 13px; padding: 0 20px;">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i style="color: black" class="far fa-star"></i>
+										<i style="color: black" class="far fa-star"></i>
+									</div>
+								</div>
+								<div class="bottom">
+									<div class="comment">
+										<textarea rows="5" cols="80" style="margin: 2px 20px; padding: 10px;" readonly>ishd sdib sdvhjb sjfhvbs jhfvb sjdhfbjs hdfb jsdhfb jshdfb jshdfb jshdfb jsdhfb jsdhfb sjdfn isbvd dufhb sivb shdcn jshdcb jshdvb jshdbc jshdbc
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="user" style="display: flex; padding: 20px;">
+							<div class="user-img">
+								<img src="user1.jpg" style="width: 100px; height: 100px; border-radius: 50%;">
+							</div>
+							<div class="user-details" style="width: 100%;">
+								<div class="top" style="display: flex; justify-content: space-between;">
+									<div class="user-text" style="display: inline-block; padding: 0 20px;">
+										<h4>Ramesh Pandey</h4>
+										<p style="font-size: 12px; color: #848484">about 12 hours ago</p>
+									</div>
+									<div class="rating" style="display: flex; color: #1ec6b6; font-size: 13px; padding: 0 20px;">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+								<div class="bottom">
+									<div class="comment">
+										<textarea rows="5" cols="80" style="margin: 2px 20px; padding: 10px;" readonly>ishd sdib sdvhjb sjfhvbs jhfvb sjdhfbjs hdfb jsdhfb jshdfb jshdfb jshdfb jsdhfb jsdhfb sjdfn isbvd dufhb sivb shdcn jshdcb jshdvb jshdbc jshdbc
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="user" style="display: flex; padding: 20px;">
+							<div class="user-img">
+								<img src="user1.jpg" style="width: 100px; height: 100px; border-radius: 50%;">
+							</div>
+							<div class="user-details" style="width: 100%;">
+								<div class="top" style="display: flex; justify-content: space-between;">
+									<div class="user-text" style="display: inline-block; padding: 0 20px;">
+										<h4>Ramesh Pandey</h4>
+										<p style="font-size: 12px; color: #848484">about 12 hours ago</p>
+									</div>
+									<div class="rating" style="display: flex; color: #1ec6b6; font-size: 13px; padding: 0 20px;">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i style="color: black;" class="far fa-star"></i>
+									</div>
+								</div>
+								<div class="bottom">
+									<div class="comment">
+										<textarea rows="5" cols="80" style="margin: 2px 20px; padding: 10px;" readonly>ishd sdib sdvhjb sjfhvbs jhfvb sjdhfbjs hdfb jsdhfb jshdfb jshdfb jshdfb jsdhfb jsdhfb sjdfn isbvd dufhb sivb shdcn jshdcb jshdvb jshdbc jshdbc
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="add_section">
+					<div class="add1">
+					<h3>Travel Tips</h3>
+					<hr>
+							<div class="add">
+								<div class="main">
+										<div class="add_img">
+											<img src="add1.jpg">
+										</div>
+										<div class="add_details">
+												<h4>Memorial Places to visit when in Nepal.</h4>
+												<p>December 10, 2018</p>
+										</div>		
+								</div>
+
+								<div class="main">
+										<div class="add_img">
+											<img src="add2.jpg">
+										</div>
+										<div class="add_details">
+												<h4>7 Tips for Nepal on a budget trip.</h4>
+												<p>December 10, 2018</p>
+										</div>		
+								</div>
+
+								<div class="main">
+										<div class="add_img">
+											<img src="add3.jpg">
+										</div>
+										<div class="add_details">
+												<h4>All the documents and necessary things you must have when travelling abroad.</h4>
+												<p>August 10, 2018</p>
+										</div>		
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</main>
+
+			<div class="section2">
+			<h1>You may also like</h1>
+			<h5>Best Offer Trips At The Moment</h5>
+			<div class="value">
+				<div class="value-inner">
+					<h4>RS 15,000</h4>
+					<img src="value1.jpg">
+					<div class="info">
+						<h2>Gosainkunda</h2>
+						<p>Trek and Adventure</p>
+					</div>
+					<div class="bott">
+						<div class="rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+
+						<div class="time">
+							<i class="far fa-clock"></i>
+							<p>6 Days</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="value-inner">
+					<h4>RS 15,000</h4>
+					<img src="value2.jpg">
+					<div class="info">
+						<h2>Bhaktapur Durbar Square</h2>
+						<p>Lifestyle and Culture</p>
+					</div>
+					<div class="bott">
+						<div class="rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+
+						<div class="time">
+							<i class="far fa-clock"></i>
+							<p>6 Days</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="value-inner">
+					<h4>RS 15,000</h4>
+					<img src="value3.jpg">
+					<div class="info">
+						<h2>Everest Base Camp</h2>
+						<p>Trek and Adventure</p>
+					</div>
+					<div class="bott">
+						<div class="rating">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+
+						<div class="time">
+							<i class="far fa-clock"></i>
+							<p>10 Days</p>
+						</div>
+					</div>
+				</div>				
+			</div> 
+		</div>
+
+
+
+		
+		<footer>
+			<div class="footer">
+				<div class="awards">
+					<h3>Our Awards</h3>
+					<p>London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom.</p>
+					<div class="award-img">
+						<img src="award1.png">
+						<img src="award2.png">
+					</div>
+				</div>
+
+				<div class="contact">
+					<h3>Contact Info</h3>
+					<span><i class="fas fa-mobile"></i><p> 01-46123456, 98514521422</p></span>
+					<span><i class="fas fa-map-marker-alt"></i><p>Koteshwor-35, Kathmandu, Nepal</p></span>
+					<span><i class="far fa-clock"></i><p>10:00 AM - 05:00 PM on Working Days</p></span>
+
+					<div class="social">
+						<i class="fab fa-facebook-f" style="color: #4867AA;"></i>
+						<i class="fab fa-twitter" style="color: #1DA1F2;"></i>
+						<i class="fab fa-youtube" style="color: #FF0000"></i>
+						<i class="fab fa-linkedin-in" style="color: #0274B3;"></i>
+					</div>
+				</div>
+
+				<div class="recent">
+					<h3>Recent Trips</h3>
+					<div class="recent-inner">
+						<img src="dest1.jpg">
+						<img src="value1.jpg">
+						<img src="dest2.jpg">
+						<img src="value2.jpg">
+						<img src="dest3.jpg">
+						<img src="value3.jpg">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="copyright">
+				<p>© Copyright Lintend 2018 - Designed by Lintend</p>
+			</div>
+			<div class="fot-nav">
+				<ul>
+					<li>Home</li>
+					<li>Tours</li>
+					<li>Blog</li>
+					<li>About Us</li>
+				</ul>
+							</div>
+		</footer>
+	</body>
+
+
+	<script type="text/javascript">
+		var det = document.getElementById("details1");
+		var ite = document.getElementById("itenary1");
+		var rev = document.getElementById("review1");
+
+		function showDetails() {
+			det.style.display = "block";
+			det.style.opacity = "1";
+			ite.style.display = "none";
+			ite.style.opacity = "0";
+			rev.style.display = "none";
+			rev.style.opacity = "0";
+			document.getElementById("details").className = "active";
+			document.getElementById("itenary").className = "";
+			document.getElementById("review").className = "";
+		}
+
+		function showItenary() {
+			ite.style.display = "block";
+			ite.style.opacity = "1";
+			det.style.display = "none";
+			det.style.opacity = "0";
+			rev.style.display = "none";
+			rev.style.opacity = "0";
+			document.getElementById("details").className = "";
+			document.getElementById("itenary").className = "active";
+			document.getElementById("review").className = "";
+			
+		}
+
+		function showReview() {
+			rev.style.display = "block";
+			rev.style.opacity = "1";
+			ite.style.display = "none";
+			ite.style.opacity = "0";
+			det.style.display = "none";
+			det.style.opacity = "0";
+			
+			document.getElementById("details").className = "";
+			document.getElementById("itenary").className = "";
+			document.getElementById("review").className = "active";
+		}
+	</script>
+</html>

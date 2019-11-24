@@ -1,0 +1,290 @@
+<html>
+	<head>
+		<title>Booking</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nunito|Text+Me+One" rel="stylesheet">
+
+		<style>
+		*{
+		font-family: 'Nunito', sans-serif;
+		margin: 0;
+		padding: 0;
+			
+		}
+
+		body{
+			background: url("booking-back.jpg");
+			width: 100%;
+			height: 90%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: -999;
+			
+			
+		}
+	
+		.container{
+			
+			width: 100%;
+			height: 100%;
+			
+			
+		}
+
+		.container .overlay{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(10,10,10,0.7);
+			
+		}
+
+		.main{
+			top: 50px;
+			left: 35%;
+			width: 30%;
+			height: 85%;
+			position: absolute;
+			margin: auto auto;
+			z-index: 1;
+		}
+
+		.main p{
+			padding: 20px;
+		}
+
+		.main .booking{
+			background: rgba(255,255,255, 0.2);
+			width: 100%;
+			height: 100%;
+		}
+
+		.main .booking h1{
+			text-align: center; 
+			color: white; 
+			font-size: 25px; 
+			padding: 20px;
+		}
+
+		.main .booking .form .form-field{
+			color: white;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.main .booking .form .form-field label{
+			float: left;
+			font-size: 20px;
+		}
+
+		.main .booking .form .form-field input{
+			float: right;
+			padding: 5px;
+			margin: 0 auto
+			width: 70%;
+		}
+
+		.main .booking .panel-body .row{
+			padding: 5px 0;
+		}
+
+		label {
+		    display: inline-block;
+		    max-width: 100%;
+		    margin-bottom: 5px;
+		    font-weight: 700;
+		    font-size: 12;
+		    color: white;
+		}
+
+		.col-md-9 input{
+			height: 27px;
+		}	
+
+		.col-md-6{
+			padding: 20px;
+		}
+			
+		</style>
+
+	</head>
+
+	<body>
+		<div class="container">	
+			<div class="overlay">
+
+			</div>	
+
+				
+		</div>
+
+		<div class="main">
+			<div class="booking">
+				<h1>Booking Form</h1>
+				
+  
+    
+      <div class="panel-body" style="width: 400px;">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="form-group">
+               	<div class="col-md-3">
+                  <label class="control-label" style="">Full Name*</label>
+              </div>
+              <div class="col-md-9">
+                  <input type="text" class="form-control" name="fname" id="fname">
+              </div>
+               </div>
+            </div>
+         </div>
+
+          <div class="row" >
+            <div class="col-md-12">
+               <div class="form-group">
+               	<div class="col-md-3">
+                  <label class="control-label">Email*</label>
+              </div>
+              <div class="col-md-9">
+                  <input type="text" class="form-control" name="fname" id="fname">
+              </div>
+               </div>
+            </div>
+         </div>
+
+         <div class='col-md-6' style="margin: 0; padding: 20px 3px;">
+               <div class="form-group">
+               	
+                  <label class="control-label" style="color: white; text-align: center;">Departure Date/Time</label>
+                  <div class='input-group date' id='datetimepicker1'>
+                     <input type='text' class="form-control" /  style="padding: 5px; font-size: 12px;">
+                     <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+            <div class='col-md-6' style="margin: 0; padding: 20px 3px;">
+               <div class="form-group">
+               	
+                  <label class="control-label" style="color: white; text-align: center;">Return Date/Time</label>
+                  <div class='input-group date' id='datetimepicker2'>
+                     <input type='text' class="form-control" /  style="padding: 5px; font-size: 12px;">
+                     <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar" onclick=""></span>
+                     </span>
+                  </div>
+               </div>
+            </div>
+
+             
+         <div class="row">
+            <div class="col-md-12">
+               <div class="form-group">
+               	<div class="col-md-3">
+					<label class="control-label" style="color: white;">Location</label>
+              	</div>
+              	<div class="col-md-9">
+                  <input type="text" class="form-control" name="fname" id="fname">
+              </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" >
+            <div class="col-md-12">
+               <div class="form-group">
+               	<div class="col-md-3">
+               	
+                  <label class="control-label">Phone*</label>
+                  </div>
+                  <div class="col-md-9">
+                  <input type="text" class="form-control" name="fname" id="fname">
+              </div>
+               </div>
+            </div>
+         </div>
+
+
+         <div class="row"> 
+            <div class="col-md-12">
+               <div class="form-group">
+               	<div class="col-md-3">
+               	
+                  <label class="control-label">Pickup Address*</label>
+                  </div>
+                  <div class="col-md-9">
+                  <textarea class="form-control" rows="3" id="comment"></textarea>
+              </div>
+              </div>
+
+               </div>
+            </div>
+
+            <div class="row" >
+            <div class="col-md-12">
+               <div class="form-group">
+               	<div class="col-md-3">
+               	
+                  <label class="control-label">Journey Type</label>
+                  </div>
+                  	<div class="col-md-9">
+		                 <select class="form-control" id="sel1">
+						    <option>Adventure</option>
+						    <option>Sightseeing</option>
+						    <option>Bike Tours</option>
+						    <option>Jungle Safari</option>
+						  </select>
+              		</div>
+               </div>
+            </div>
+         </div>
+         
+            
+
+               	
+
+            </div>
+            <div class="col-md-12" style="text-align: center;">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+        
+</div>
+
+</div>
+		</div>	
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script>
+	$(function () {
+	  	$('#datetimepicker1').datetimepicker();
+	  	$('#datetimepicker2').datetimepicker();
+	});
+</script>
+			
+
+		
+			
+
+
+
+		
+		
+	</body>
+
+
+	
+</html>

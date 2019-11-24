@@ -1,0 +1,643 @@
+<html>
+	<head>
+		<title>Tours and Packages</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nunito|Text+Me+One" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<style>
+			*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Nunito', sans-serif;
+			}
+
+		.container .navigation{
+			color: white;
+			width: 95%;
+			position: absolute;
+			z-index: 999;
+		}
+
+		.container .navigation .nav-left{
+			float: left;
+
+		}
+
+		.container .navigation .nav-left img{
+			width: 100px;
+			height: 100px;
+		}
+
+		.container .navigation .nav-right{
+			float: right;
+			padding: 20px;
+		}
+
+		.container .navigation .nav-right ul{
+			list-style: none;
+			display: flex;
+		}
+
+		.container .navigation .nav-right ul li{
+			padding: 10px 20px;
+			border-bottom: 2px solid transparent;
+			transition: 0.3s ease;
+			cursor: pointer;
+			font-size: 15px;
+			text-shadow: 5px 5px 5px black;
+		}
+
+		.container .navigation .nav-right ul li a{
+			text-decoration: none;
+			color: white;
+		}
+
+		.container .navigation .nav-right ul li:hover{
+			border-bottom: 2px solid white;
+		}
+
+		footer{
+			background: black;
+			color: white;
+			padding: 30px 50px;
+			overflow: auto;
+		}
+
+		.footer{
+			
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.footer .awards{
+			width: 30%;
+			text-align: justify;
+		}
+
+		.footer .awards h3{
+			padding: 20px 0;
+		}
+
+		.footer .awards .award-img img{
+			width: 120px;
+			height: 120px;
+			margin: 20px;
+		}
+
+		.footer .contact{
+			width: 30%;
+			text-align: justify;
+		}
+
+		.footer .contact h3{
+			padding: 20px 0;
+		}
+
+		.footer .contact span{
+			display: flex;
+			padding: 5px 0;
+		}
+
+		.footer .contact span i{
+			font-size: 22px;
+			padding-right: 10px;
+		}
+
+		.footer .contact .social{
+			display: flex;
+			padding: 30px;
+		}
+
+		.footer .contact .social i{
+			padding: 0 20px;
+			font-size: 25px;
+		}
+
+		.footer .recent{
+			width: 30%;
+		}
+
+		.footer .recent h3{
+			padding: 20px 0;
+		}
+
+		.footer .recent-inner img{
+			width: 115px;
+			height: 115px;
+			cursor: pointer;
+		}
+
+		footer hr{
+			display: block;
+		    height: 1px;
+		    border: 0;
+		    border-top: 1px solid #dfdfdf;
+		    margin: 1em 0;
+		    padding: 0;
+		}
+
+		footer .copyright{
+			float: left;
+		}
+
+		footer .copyright p{
+			font-size: 12px;
+			font-family: sans-serif;
+			padding: 10px 30px;
+		}
+
+		footer .fot-nav{
+			float: right;
+		}
+
+		footer .fot-nav ul{
+			display: flex;
+			list-style: none;
+			padding: 10px 30px; 
+		}
+
+		footer .fot-nav ul li{
+			font-family: sans-serif;
+			font-size: 14px;
+			padding: 0 20px;
+			cursor: pointer;
+		}
+
+		.back-img img{
+			width: 100%;
+			height: 100%;
+		}
+
+		.back-img .text{
+			color: white;
+			position: absolute;
+			width: 100%;
+		}
+
+		.back-img .text h1{
+			text-align: center;
+			margin-top: -130px;
+			right: 20px;
+			text-shadow: 5px 5px 5px black;
+		}
+
+			/*CSS FOR THIS PAGE BEGINS*/
+
+		main{
+			padding: 50px;
+			background: #FAFAFA;
+
+		}
+
+		main h1{
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		main .container-inner{
+			display: flex;
+		}
+
+		main .main-left{
+			width: 20%;
+			border: 1px solid black;
+			background: white;
+			padding: 20px;
+		}
+
+		main .main-left .categories{
+			margin: 20px 0;
+		}
+
+		main .main-left .categories input{
+			padding: 0 5px;
+		}
+
+		main .main-right{
+			padding: 0 20px;
+			width: 80%;
+		}
+
+		main .main-right .searchSort{
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+
+		main .main-right .searchSort label{
+			padding: 10px;
+		}
+
+		main .main-right .searchSort select{
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		main .main-right .searchSort input{
+			padding: 5px;
+			border-radius: 5px;
+			width: 250px;
+
+		}
+
+		main .main-right .searchSort button{
+			padding: 7px 10px;
+			border-radius: 5px;
+			background: #ff4a52;
+			border: none;
+			color: white;
+			font-weight: bold;
+		}
+
+		main .main-right .tours{
+			display: flex;
+			border: 1px solid black;
+			padding: 10px;
+			margin: 10px 0;
+			background: white;
+			box-shadow: 2px 2px 5px;	
+			
+		}
+
+		main .main-right .tours .image img{
+			width: 150px;
+			height: 150px;
+			
+		}
+
+		main .main-right .tours .details{
+			padding: 0 20px;
+		}
+
+		main .main-right .tours .details .rating{
+			display: flex;
+			padding: 5px 0;
+		}
+
+		main .main-right .tours .details .rating i{
+			font-size: 14px;
+			padding: 3px;
+		}
+
+		main .main-right .tours .details .rating .fas{
+			color: #1ec6b6;
+		}
+		
+		main .main-right .tours .details .rating .reviews p{
+			padding: 0 10px;
+		}
+
+		main .main-right .tours .details .info{
+			width: 500px;
+			text-align: justify;
+		}
+
+		main .main-right .tours .price{
+			margin: auto auto;
+		}
+
+		main .main-right .tours .price .amount h4{
+			padding: 10px;
+			color: #FF4A52;
+			font-weight: bold;
+		}
+
+		main .main-right .tours .price .learn button{
+			padding: 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+			background: transparent;
+			margin: 20px 0;
+			font-weight: bold;
+			transition: 0.3s ease;
+		}
+
+		main .main-right .tours .price .learn button:hover{
+			border: 1px solid #1EC6B6;
+			
+		}
+
+		main .main-left .price-range-slider {
+  width: 100%;
+  float: left;
+  padding-right:  20px;
+  margin-bottom: 30px;
+}
+main .main-left .price-range-slider .range-value {
+  margin: 0;
+}
+main .main-left .price-range-slider .range-value input {
+  width: 100%;
+  background: none;
+  color: #000;
+  font-size: 13px;
+  font-weight: initial;
+  box-shadow: none;
+  border: none;
+  margin: 10px 0;
+}
+main .main-left .price-range-slider .range-bar {
+  border: none;
+  background: #000;
+  height: 3px;
+  width: 96%;
+  margin-left: 8px;
+}
+main .main-left .price-range-slider .range-bar .ui-slider-range {
+  background: #06b9c0;
+}
+main .main-left .price-range-slider .range-bar .ui-slider-handle {
+  border: none;
+  border-radius: 25px;
+  background: #fff;
+  border: 2px solid #06b9c0;
+  height: 17px;
+  width: 17px;
+  top: -0.52em;
+  cursor: pointer;
+}
+main .main-left .price-range-slider .range-bar .ui-slider-handle + span {
+  background: #06b9c0;
+}
+
+
+
+		
+		</style>
+		
+
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="overlay">
+
+			</div>
+
+			<div class="navigation">
+				<div class="nav-left">
+					<img src="logo.png">
+				</div>
+				<div class="nav-right">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li>TOURS</li>
+						<li><a href="booking.html">BOOKING</a></li>
+						<li><a href="destination.html">DESTINATIONS</a></li>
+						<li>ABOUT US</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="back-img">
+				<img src="toursback.jpg">
+				<div class="text">
+					<h1>Tours and Packages</h1>
+				</div>
+			</div>	
+
+					
+		</div>
+
+
+		<main>
+			<h1>Tours and Packages</h1>
+			<div class="container-inner">
+				
+					<div class="main-left">
+						
+
+						<div class="categories">
+							<h3>Categories</h3>
+							<input type="checkbox" name="filter1" value="Sightseeing"> Sightseeing<br>
+							<input type="checkbox" name="filter1" value="Sightseeing"> Boating<br>
+							<input type="checkbox" name="filter1" value="Sightseeing"> Nature and Wildlife<br>
+							<input type="checkbox" name="filter1" value="Sightseeing"> Ride Out<br>
+							<input type="checkbox" name="filter1" value="Sightseeing"> Hiking<br>
+
+						</div>
+
+						<div class="price-range-slider">
+  						<h3>Price Range</h3>
+						  <p class="range-value">
+						    <input type="text" id="amount" readonly>
+						  </p>
+						  <div id="slider-range" class="range-bar"></div>
+						  
+						</div>
+
+						<div class="maps">
+							<h3>Know Where you're going</h3>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.926224801102!2d85.34220581448446!3d27.68867498279967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191b4df02457%3A0x8de04350dc4dd9b0!2sLintend!5e0!3m2!1sen!2snp!4v1545386725708" width="250" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+
+					</div>
+					<div class="main-right">
+						<div class="searchSort">
+							<div class="sort">
+								<label>Sort By:</label>
+								<select>
+								  <option value="volvo">Rating</option>
+								  <option value="saab">Price</option>
+								  <option value="mercedes">Latest</option>
+								  <option value="audi">Top Selling</option>
+								</select>
+							</div>
+							<div class="search">
+								<input type="text">
+								<button>Search</button>
+							</div>
+						</div>
+
+
+						<div class="tours">
+
+							<div class="image">
+								<img src="tour1.jpg">
+							</div>
+
+							<div class="details">
+								<h2>Upper Mustang Drive and Trek</h2>
+
+								<div class="rating">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="far fa-star"></i>
+									<div class="reviews">
+										<p>20 Reviews</p>
+									</div>
+								</div>
+
+								<div class="Info">
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+								</div>
+							</div>
+
+							<div class="price">
+								<div class="amount">
+									<h4>RS 15,000</h4>
+								</div>
+								<div class="learn">
+									<button>Learn More</button>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="tours">
+
+							<div class="image">
+								<img src="tour1.jpg">
+							</div>
+
+							<div class="details">
+								<h2>Upper Mustang Drive and Trek</h2>
+
+								<div class="rating">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="far fa-star"></i>
+									<div class="reviews">
+										<p>20 Reviews</p>
+									</div>
+								</div>
+
+								<div class="Info">
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+								</div>
+							</div>
+
+							<div class="price">
+								<div class="amount">
+									<h4>RS 15,000</h4>
+								</div>
+								<div class="learn">
+									<button>Learn More</button>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="tours">
+
+							<div class="image">
+								<img src="tour1.jpg">
+							</div>
+
+							<div class="details">
+								<h2>Upper Mustang Drive and Trek</h2>
+
+								<div class="rating">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="far fa-star"></i>
+									<div class="reviews">
+										<p>20 Reviews</p>
+									</div>
+								</div>
+
+								<div class="Info">
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+								</div>
+							</div>
+
+							<div class="price">
+								<div class="amount">
+									<h4>RS 15,000</h4>
+								</div>
+								<div class="learn">
+									<button>Learn More</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+			</div>			
+		</main>
+
+
+
+		
+		<footer>
+			<div class="footer">
+				<div class="awards">
+					<h3>Our Awards</h3>
+					<p>London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom.</p>
+					<div class="award-img">
+						<img src="award1.png">
+						<img src="award2.png">
+					</div>
+				</div>
+
+				<div class="contact">
+					<h3>Contact Info</h3>
+					<span><i class="fas fa-mobile"></i><p> 01-46123456, 98514521422</p></span>
+					<span><i class="fas fa-map-marker-alt"></i><p>Koteshwor-35, Kathmandu, Nepal</p></span>
+					<span><i class="far fa-clock"></i><p>10:00 AM - 05:00 PM on Working Days</p></span>
+
+					<div class="social">
+						<i class="fab fa-facebook-f" style="color: #4867AA;"></i>
+						<i class="fab fa-twitter" style="color: #1DA1F2;"></i>
+						<i class="fab fa-youtube" style="color: #FF0000"></i>
+						<i class="fab fa-linkedin-in" style="color: #0274B3;"></i>
+					</div>
+				</div>
+
+				<div class="recent">
+					<h3>Recent Trips</h3>
+					<div class="recent-inner">
+						<img src="dest1.jpg">
+						<img src="value1.jpg">
+						<img src="dest2.jpg">
+						<img src="value2.jpg">
+						<img src="dest3.jpg">
+						<img src="value3.jpg">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="copyright">
+				<p>© Copyright Lintend 2018 - Designed by Lintend</p>
+			</div>
+			<div class="fot-nav">
+				<ul>
+					<li>Home</li>
+					<li>Tours</li>
+					<li>Blog</li>
+					<li>About Us</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+
+	<script type="text/javascript">
+	//-----JS for Price Range slider-----
+
+$(function() {
+	$( "#slider-range" ).slider({
+		  range: true,
+		  min: 1000,
+		  max: 100000,
+		  values: [ 1000, 50000 ],
+		  slide: function( event, ui ) {
+			$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+		  }
+		});
+		$( "#amount" ).val( "Rs" + $( "#slider-range" ).slider( "values", 0 ) +
+		  " - Rs" + $( "#slider-range" ).slider( "values", 1 ) );
+	});
+</script>
+
+</html>
